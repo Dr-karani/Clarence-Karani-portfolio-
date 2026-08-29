@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Development | Clarence Karani</title>
+
+    <meta name="description"
+          content="Web development projects by Clarence Karani, including business websites, e-commerce platforms and digital solutions.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        .case-hero {
+            padding: 170px 0 100px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .case-hero h1 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(50px, 7vw, 90px);
+            line-height: .95;
+            letter-spacing: -5px;
+            max-width: 900px;
+        }
+
+        .case-hero h1 span {
+            color: #777;
+        }
+
+        .case-intro {
+            max-width: 650px;
+            margin-top: 30px;
+            color: #888;
+            font-size: 17px;
+        }
+
+        .project-case {
+            padding: 110px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-number {
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: #666;
+        }
+
+        .case-title {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(35px, 5vw, 60px);
+            letter-spacing: -3px;
+            margin: 15px 0;
+        }
+
+        .case-description {
+            max-width: 720px;
+            color: #888;
+            font-size: 16px;
+            margin-bottom: 45px;
+        }
+
+        .case-meta {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border: 1px solid var(--border);
+            margin-bottom: 50px;
+        }
+
+        .meta-box {
+            padding: 25px;
+            border-right: 1px solid var(--border);
+        }
+
+        .meta-box:last-child {
+            border-right: none;
+        }
+
+        .meta-box small {
+            display: block;
+            color: #555;
+            font-size: 9px;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .meta-box strong {
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .case-preview {
+            min-height: 480px;
+            border: 1px solid var(--border);
+            background: #121212;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+            margin-bottom: 35px;
+        }
+
+        .preview-browser {
+            width: 100%;
+            min-height: 350px;
+            border: 1px solid #333;
+            background: #0b0b0b;
+        }
+
+        .preview-bar {
+            height: 35px;
+            border-bottom: 1px solid #292929;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding-left: 15px;
+        }
+
+        .preview-bar i {
+            width: 7px;
+            height: 7px;
+            background: #444;
+            border-radius: 50%;
+        }
+
+        .preview-content {
+            padding: 70px 50px;
+        }
+
+        .preview-content small {
+            color: #666;
+            letter-spacing: 3px;
+        }
+
+        .preview-content h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(35px, 5vw, 65px);
+            line-height: 1;
+            margin-top: 20px;
+        }
+
+        .case-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 50px;
+        }
+
+        .detail h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .detail p {
+            color: #777;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            color: #888;
+            font-size: 14px;
+        }
+
+        .feature-list li::before {
+            content: "↗";
+            margin-right: 12px;
+            color: #aaa;
+        }
+
+        .technology-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .technology-list span {
+            border: 1px solid var(--border);
+            padding: 8px 12px;
+            font-size: 11px;
+            color: #888;
+        }
+
+        .case-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 45px;
+            flex-wrap: wrap;
+        }
+
+        .skills-section {
+            padding: 110px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin-top: 60px;
+        }
+
+        .skill-group {
+            background: var(--background);
+            padding: 35px;
+            min-height: 200px;
+        }
+
+        .skill-group h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .skill-group p {
+            color: #777;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        @media (max-width: 800px) {
+
+            .case-meta {
+                grid-template-columns: 1fr;
+            }
+
+            .meta-box {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .meta-box:last-child {
+                border-bottom: none;
+            }
+
+            .case-details {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .case-preview {
+                padding: 25px;
+                min-height: 350px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <nav class="nav container">
+
+        <a href="index.html" class="logo">
+            <span>CK</span>
+        </a>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open menu">
+
+            <span></span>
+            <span></span>
+
+        </button>
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="index.html#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="case-hero">
+
+    <div class="container">
+
+        <p class="eyebrow">WEB DEVELOPMENT</p>
+
+        <h1>
+            Websites built with
+            <span>purpose.</span>
+        </h1>
+
+        <p class="case-intro">
+            A selection of websites and digital platforms I've designed
+            and developed, combining responsive UI/UX, modern web
+            technologies and business-focused functionality.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+
+<!-- PROJECT 01 -->
+
+<article class="project-case">
+
+<div class="container">
+
+    <span class="project-number">01 / 03</span>
+
+    <h2 class="case-title">
+        Holding Hands Mission
+    </h2>
+
+    <p class="case-description">
+        A professional website created for a rehabilitation and recovery
+        centre. The website was designed to establish a strong online
+        presence, communicate the centre's services and make it easier
+        for families and potential clients to get in touch.
+    </p>
+
+
+    <div class="case-meta">
+
+        <div class="meta-box">
+
+            <small>ROLE</small>
+
+            <strong>
+                Web Designer & Developer
+            </strong>
+
+        </div>
+
+        <div class="meta-box">
+
+            <small>TYPE</small>
+
+            <strong>
+                Business Website
+            </strong>
+
+        </div>
+
+        <div class="meta-box">
+
+            <small>STATUS</small>
+
+            <strong>
+                Live Project
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="case-preview">
+
+        <div class="preview-browser">
+
+            <div class="preview-bar">
+
+                <i></i>
+                <i></i>
+                <i></i>
+
+            </div>
+
+            <div class="preview-content">
+
+                <small>
+                    REHABILITATION & RECOVERY
+                </small>
+
+                <h3>
+                    Holding Hands<br>
+                    Mission
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="case-details">
+
+        <div class="detail">
+
+            <h3>Project Overview</h3>
+
+            <p>
+                The project focused on creating a trustworthy and
+                professional digital presence for the organisation,
+                while keeping the user journey simple for people
+                looking for help and information.
+            </p>
+
+        </div>
+
+
+        <div class="detail">
+
+            <h3>Key Features</h3>
+
+            <ul class="feature-list">
+
+                <li>Responsive mobile-first design</li>
+                <li>Service information sections</li>
+                <li>Contact and enquiry functionality</li>
+                <li>Google Maps integration</li>
+                <li>Gallery and testimonials</li>
+                <li>SEO-focused structure</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="detail" style="margin-top:50px;">
+
+        <h3>Technologies & Tools</h3>
+
+        <div class="technology-list">
+
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>GitHub</span>
+            <span>Figma</span>
+            <span>Responsive Design</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="case-buttons">
+
+        <a
+            href="https://holdinghandsmission.co.ke/"
+            target="_blank"
+            class="btn btn-primary">
+
+            View Live Website ↗
+
+        </a>
+
+    </div>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECT 02 -->
+
+<article class="project-case">
+
+<div class="container">
+
+    <span class="project-number">02 / 03</span>
+
+    <h2 class="case-title">
+        KuuzaLink
+    </h2>
+
+    <p class="case-description">
+
+        A digital marketplace concept focused on connecting
+        sellers and buyers through an easy-to-use online platform.
+        The project combines interface design, responsive development
+        and e-commerce thinking.
+
+    </p>
+
+
+    <div class="case-meta">
+
+        <div class="meta-box">
+
+            <small>ROLE</small>
+
+            <strong>
+                UI/UX Designer & Developer
+            </strong>
+
+        </div>
+
+        <div class="meta-box">
+
+            <small>TYPE</small>
+
+            <strong>
+                Marketplace / E-commerce
+            </strong>
+
+        </div>
+
+        <div class="meta-box">
+
+            <small>STATUS</small>
+
+            <strong>
+                Live Project
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="case-preview">
+
+        <div class="preview-browser">
+
+            <div class="preview-bar">
+
+                <i></i>
+                <i></i>
+                <i></i>
+
+            </div>
+
+            <div class="preview-content">
+
+                <small>
+                    ONLINE MARKETPLACE
+                </small>
+
+                <h3>
+                    Kuuza<br>
+                    Link
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="case-details">
+
+        <div class="detail">
+
+            <h3>Project Overview</h3>
+
+            <p>
+
+                The platform was designed around simple navigation,
+                product discovery and helping sellers establish an
+                online presence.
+
+            </p>
+
+        </div>
+
+
+        <div class="detail">
+
+            <h3>Key Features</h3>
+
+            <ul class="feature-list">
+
+                <li>Responsive marketplace interface</li>
+                <li>Product-focused navigation</li>
+                <li>Seller-oriented experience</li>
+                <li>Mobile-friendly UI</li>
+                <li>Conversion-focused layouts</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="detail" style="margin-top:50px;">
+
+        <h3>Technologies & Tools</h3>
+
+        <div class="technology-list">
+
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Figma</span>
+            <span>Responsive UI</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="case-buttons">
+
+        <a
+            href="https://kuuzalink.com/"
+            target="_blank"
+            class="btn btn-primary">
+
+            View Live Website ↗
+
+        </a>
+
+    </div>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECT 03 -->
+
+<article class="project-case">
+
+<div class="container">
+
+    <span class="project-number">03 / 03</span>
+
+    <h2 class="case-title">
+        4FOLD Fashion Hub
+    </h2>
+
+    <p class="case-description">
+
+        An e-commerce website concept designed to provide customers
+        with a modern online shopping experience, including product
+        presentation, category navigation and mobile-friendly layouts.
+
+    </p>
+
+
+    <div class="case-meta">
+
+        <div class="meta-box">
+
+            <small>ROLE</small>
+
+            <strong>
+                UI/UX Designer & Developer
+            </strong>
+
+        </div>
+
+        <div class="meta-box">
+
+            <small>TYPE</small>
+
+            <strong>
+                E-commerce Website
+            </strong>
+
+        </div>
+
+        <div class="meta-box">
+
+            <small>PLATFORM</small>
+
+            <strong>
+                GitHub Pages
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="case-preview">
+
+        <div class="preview-browser">
+
+            <div class="preview-bar">
+
+                <i></i>
+                <i></i>
+                <i></i>
+
+            </div>
+
+            <div class="preview-content">
+
+                <small>
+                    E-COMMERCE
+                </small>
+
+                <h3>
+                    4FOLD<br>
+                    Fashion Hub
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="case-details">
+
+        <div class="detail">
+
+            <h3>Project Overview</h3>
+
+            <p>
+
+                The goal was to create an e-commerce experience that
+                feels closer to a modern shopping application rather
+                than a traditional static website.
+
+            </p>
+
+        </div>
+
+
+        <div class="detail">
+
+            <h3>Key Features</h3>
+
+            <ul class="feature-list">
+
+                <li>Modern shopping interface</li>
+                <li>Product categories</li>
+                <li>Responsive mobile layout</li>
+                <li>Product cards</li>
+                <li>GitHub Pages deployment</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="detail" style="margin-top:50px;">
+
+        <h3>Technologies & Tools</h3>
+
+        <div class="technology-list">
+
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>GitHub</span>
+            <span>GitHub Pages</span>
+            <span>Figma</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="case-buttons">
+
+        <a
+            href="https://dr-karani.github.io/4Fold-Fashion-hub/"
+            target="_blank"
+            class="btn btn-primary">
+
+            View Live Website ↗
+
+        </a>
+
+    </div>
+
+</div>
+
+</article>
+
+
+</section>
+
+
+<!-- TECHNICAL SKILLS -->
+
+<section class="skills-section">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            TECHNICAL SKILLS
+        </p>
+
+        <h2>
+            Tools I use to<br>
+            <span>build digital products.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+        <div class="skill-group">
+
+            <h3>Frontend</h3>
+
+            <p>
+                HTML5<br>
+                CSS3<br>
+                JavaScript<br>
+                React<br>
+                Next.js
+            </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>Backend</h3>
+
+            <p>
+                PHP<br>
+                Python<br>
+                Node.js<br>
+                REST APIs
+            </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>Databases</h3>
+
+            <p>
+                MySQL<br>
+                MariaDB<br>
+                MongoDB
+            </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>CMS & E-commerce</h3>
+
+            <p>
+                WordPress<br>
+                WooCommerce<br>
+                Shopify<br>
+                Webflow
+            </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>Business Systems</h3>
+
+            <p>
+                ERPNext<br>
+                Frappe Framework<br>
+                POS Systems<br>
+                API Integrations
+            </p>
+
+        </div>
+
+
+        <div class="skill-group">
+
+            <h3>Design</h3>
+
+            <p>
+                Figma<br>
+                Photoshop<br>
+                Illustrator<br>
+                InDesign<br>
+                CorelDRAW
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+    <div class="cta-inner">
+
+        <p class="eyebrow">
+            LET'S BUILD
+        </p>
+
+        <h2>
+            Have a project<br>
+            <span>in mind?</span>
+        </h2>
+
+        <p>
+            I'm open to freelance opportunities, collaborations
+            and full-time roles where I can contribute through
+            design and development.
+        </p>
+
+        <a
+            href="index.html#contact"
+            class="btn btn-primary">
+
+            Get In Touch ↗
+
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+<div class="container footer-inner">
+
+    <div>
+
+        <a href="index.html" class="logo">
+            <span>CK</span>
+        </a>
+
+        <p>
+            Designing. Developing. Delivering.
+        </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+
+    </div>
+
+
+    <p class="copyright">
+        © 2026 Clarence Karani. All rights reserved.
+    </p>
+
+</div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
